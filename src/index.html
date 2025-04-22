@@ -1,15 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silly IDE</title>
-    <script type="module" src="/main.js" defer></script>
-  </head>
-<input type="text"></html></input>
-  <body>
-    <main class="container">
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom IDE</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ide-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">Explorer</div>
+      <ul class="file-list">
+        <li><span class="file-icon">📄</span> index.html</li>
+        <li><span class="file-icon">🎨</span> styles.css</li>
+        <li><span class="file-icon">⚙️</span> script.js</li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="editor-header">
+        <div class="tabs">
+          <div class="tab active">index.html</div>
+          <div class="tab">styles.css</div>
+          <div class="tab">script.js</div>
+        </div>
+        <div class="actions">
+          <button class="action-btn">Run</button>
+          <button class="action-btn">Save</button>
+        </div>
+      </div>
+
+      <div class="code-editor">
+        <textarea class="editor" placeholder="Write your code here..."></textarea>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-header">Terminal</div>
+        <div class="terminal-output">
+          <pre>$ npm start</pre>
+          <pre>> Starting development server...</pre>
+        </div>
+        <input type="text" class="terminal-input" placeholder="Type a command..." />
+      </div>
+    </div>
+  </div>
+</body>
 </html>
